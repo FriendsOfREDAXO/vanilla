@@ -3,12 +3,12 @@
 REDAXO 5 Addon um jQuery-Events in Vanilla JS abzufangen.
 
 Verfügbare Events:
-`rex:ready`
-`pjax:start`
-`pjax:success`
-`pjax:end`
-`pjax:click`
-`pjax:error`
+`$rex:ready`
+`$pjax:start`
+`$pjax:success`
+`$pjax:end`
+`$pjax:click`
+`$pjax:error`
 
 ```javascript
 document.addEventListener('$rex:ready', () => console.log('REDAXO is ready'));
