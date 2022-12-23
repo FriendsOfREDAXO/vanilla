@@ -22,6 +22,30 @@ delegatejQueryEvent('jquery:event');
 document.addEventListener('$jquery:event', () => console.log('Event fired'));
 ```
 
+Alpinejs Directive:
+
+```javascript
+document.addEventListener('alpine:init', () => {
+    Alpine.directive('rex-ready', (element, {expression}, {evaluate, cleanup}) => {
+        let readyHandler = () => {
+            evaluate(expression)
+        }
+
+        window.addEventListener('$rex:ready', readyHandler);
+
+        cleanup(() => {
+            window.removeEventListener('$rex:ready', readyHandler)
+        })
+    });
+});
+```
+
+```html
+<div x-data="{}"
+     x-rex-ready="console.log('REDAXO is ready!')">
+</div>
+```
+
 
 ## Credits
 
