@@ -2,17 +2,22 @@
 
 REDAXO 5 Addon um jQuery-Events in Vanilla JS abzufangen.
 
-Verfügbare Events:
-`$rex:ready`
-`$pjax:start`
-`$pjax:success`
-`$pjax:end`
-`$pjax:click`
-`$pjax:error`
+## Events
+
+Event | Parameter
+----- | ----------
+`$rex:ready` | [event, data, status, xhr]
+`$pjax:start` | [event, xhr, status, error]
+`$pjax:success` | [event, xhr, status]
+`$pjax:end` | [event, xhr, settings]
+`$pjax:click` | [event, xhr]
+`$pjax:error` | [event, elements]
+
+## Anwendung
 
 ```javascript
 document.addEventListener('$rex:ready', () => console.log('REDAXO is ready'));
-document.addEventListener('$pjax:success', () => console.log('Pjax succeeded'));
+document.addEventListener('$pjax:success', event => console.log('Pjax succeeded', event.detail.xhr, event.detail.status));
 ```
 
 Weitere Events hinzufügen:
@@ -22,7 +27,16 @@ delegatejQueryEvent('jquery:event');
 document.addEventListener('$jquery:event', () => console.log('Event fired'));
 ```
 
-Alpinejs Directive:
+Weitere Events mit Parametern hinzufügen:
+
+```javascript
+delegatejQueryEvent('jquery:event', ['event', 'param']);
+document.addEventListener('$jquery:event', event => console.log('Event fired', event.detail.param));
+```
+
+### Alpine.js
+
+Alpine.js Directive:
 
 ```javascript
 document.addEventListener('alpine:init', () => {
