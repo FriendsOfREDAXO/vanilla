@@ -6,6 +6,7 @@ const delegatejQueryEvent = (event, params = ['event']) => {
                 acc[cur] = args[idx]
                 return acc
             }, {})
+            console.log('jquery-events-to-dom-events.js:9', '  ↴', '\n', detail);
             detail.event.target.dispatchEvent(
                 new CustomEvent(`$${event}`, {
                     detail,
@@ -28,8 +29,8 @@ const abnegatejQueryEvent = (event, handler) => {
 
 // basic redaxo/pjax events
 delegatejQueryEvent('rex:ready');
-delegatejQueryEvent('pjax:start');
-delegatejQueryEvent('pjax:success');
-delegatejQueryEvent('pjax:end');
-delegatejQueryEvent('pjax:click');
-delegatejQueryEvent('pjax:error');
+delegatejQueryEvent('pjax:start', ['event', 'xhr', 'options']);
+delegatejQueryEvent('pjax:success', ['event', 'data', 'status', 'xhr', 'options']);
+delegatejQueryEvent('pjax:end', ['event', 'xhr', 'options']);
+delegatejQueryEvent('pjax:click', ['event', 'options']);
+delegatejQueryEvent('pjax:error', ['event', 'xhr', 'textStatus', 'error', 'options']);
