@@ -16,3 +16,4 @@ installer_ignore:
   - package.json
   - yarn.lock
   - resources
+  - webpack.mix.js

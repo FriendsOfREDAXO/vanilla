@@ -1,0 +1,4 @@
+/node_modules/
+/mix-manifest.json
+/yarn.lock
+/.idea/
