@@ -13,7 +13,7 @@ Event | Parameter
 `$pjax:click` | [event, xhr]
 `$pjax:error` | [event, elements]
 
-## Anwendung
+## Verwendung
 
 ```javascript
 document.addEventListener('$rex:ready', () => console.log('REDAXO is ready'));
