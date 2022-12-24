@@ -6,7 +6,7 @@ REDAXO 5 Addon um jQuery-Events in Vanilla JS abzufangen.
 
 Event | Parameter
 ----- | ----------
-`$rex:ready` | [event, data, status, xhr]
+`$rex:ready` | [event]
 `$pjax:start` | [event, xhr, status, error]
 `$pjax:success` | [event, xhr, status]
 `$pjax:end` | [event, xhr, settings]
