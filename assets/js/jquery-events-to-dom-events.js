@@ -6,7 +6,6 @@ const delegatejQueryEvent = (event, params = ['event']) => {
                 acc[cur] = args[idx]
                 return acc
             }, {})
-            console.log('jquery-events-to-dom-events.js:9', '  ↴', '\n', detail);
             detail.event.target.dispatchEvent(
                 new CustomEvent(`$${event}`, {
                     detail,
