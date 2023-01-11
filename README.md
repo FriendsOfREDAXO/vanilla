@@ -60,6 +60,16 @@ document.addEventListener('alpine:init', () => {
 </div>
 ```
 
+## Entwicklung
+
+Assets bauen/minifizieren:
+
+**Node Module installieren**
+`npm install` oder `yarn`
+
+**Assets bauen/minifizieren**
+`npm run build` oder `yarn build`
+
 
 ## Credits
 
