@@ -10,7 +10,7 @@ const delegatejQueryEvent = (event, params = ['event']) => {
                 new CustomEvent(`$${event}`, {
                     detail,
                     bubbles: true,
-                    cancelable: true
+                    cancelable: true,
                 })
             )
         }
@@ -18,12 +18,6 @@ const delegatejQueryEvent = (event, params = ['event']) => {
         ? document.addEventListener(event, handler)
         : window.$(document).on(event, handler)
     return handler
-}
-
-const abnegatejQueryEvent = (event, handler) => {
-    event.startsWith('$')
-        ? document.removeEventListener(event, handler)
-        : window.$(document).off(event, handler)
 }
 
 // basic redaxo/pjax events

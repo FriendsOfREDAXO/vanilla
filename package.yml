@@ -13,6 +13,7 @@ installer_ignore:
   - .gitignore
   - .gitignore
   - .editorconfig
+  - .eslintrc.js
   - package.json
   - yarn.lock
   - resources
