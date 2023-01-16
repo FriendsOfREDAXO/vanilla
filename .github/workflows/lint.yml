@@ -29,4 +29,4 @@ jobs:
           npm install
 
       - name: Run lint
-        run: npx eslint .\assets\js\jquery-events-to-dom-events.js
+        run: npx eslint ./assets/js/jquery-events-to-dom-events.js
