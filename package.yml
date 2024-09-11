@@ -1,6 +1,6 @@
 package: vanilla
 version: '0.0.1'
-author: 'eaCe'
+author: Friends Of REDAXO
 
 requires:
   redaxo: ^5.10.0
